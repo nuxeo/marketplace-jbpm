@@ -1,0 +1,27 @@
+<package type="addon" name="nuxeo-platform-jbpm" version="@VERSION@">
+  <title>Nuxeo jBPM</title>
+  <description>
+<p>
+This addon provides an interface to manage workflows through the jBPM engine.
+</p>
+<p>
+It was included by default up to Nuxeo 5.5, but since Nuxeo 5.6 it has been deprecated and moved
+to a separate addon, and replaced by the new Document Routing module.
+</p>
+  </description>
+  <home-page>http://doc.nuxeo.com/</home-page>
+  <vendor>Nuxeo</vendor>
+  <installer restart="true" />
+  <uninstaller restart="true" />
+  <!-- <hotreload-support>false</hotreload-support> -->
+  <!-- <require-terms-and-conditions-acceptance>false -->
+  <!-- </require-terms-and-conditions-acceptance> -->
+  <nuxeo-validation>nuxeo_certified</nuxeo-validation>
+  <production-state>production_ready</production-state>
+  <supported>true</supported>
+  <platforms>
+    <platform>cap-@DISTRIB_VERSION@</platform>
+  </platforms>
+  <license>LGPLv2.1</license>
+  <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
+</package>
