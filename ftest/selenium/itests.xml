@@ -7,7 +7,7 @@
   <taskdef resource="net/sf/antcontrib/antlib.xml" />
 
   <!-- List of Selenium HTML test suites (without the ".html" file extension)  -->
-  <property name="suites" value="suite" />
+  <property name="suites" value="suite-setup,suite" />
 
   <!-- Base distribution (nuxeo-cap, nuxeo-dm, ...) -->
   <property name="wizard.preset" value="nuxeo-cap" />

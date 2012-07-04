@@ -1,0 +1,18 @@
+# Running test suites
+
+Tests require firefox 3.6 or higher.
+
+See [tools-nuxeo-ftest documentation](https://github.com/nuxeo/tools-nuxeo-ftest).
+
+Sample usage:
+
+    mvn verify -Pqa,[tomcat|jboss] -Dwizard.preset=nuxeo-cap -Dsuites=suite-setup,suite
+    mvn verify -Denv.NUXEO_HOME=/path/to/my/tomcat -Dsuites=suite-setup,suite
+
+To run the suites on an already-running Nuxeo instance, use:
+
+    mvn org.nuxeo.build:nuxeo-distribution-tools:integration-test -o -Dtarget=run-selenium -Dsuites=suite-setup,suite
+
+# Writing tests
+
+See [Selenium tests documentation](http://doc.nuxeo.com/x/eQQz).
