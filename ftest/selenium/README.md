@@ -6,7 +6,7 @@ See [tools-nuxeo-ftest documentation](https://github.com/nuxeo/tools-nuxeo-ftest
 
 Sample usage:
 
-    mvn verify -Pqa,[tomcat|jboss] -Dwizard.preset=nuxeo-cap -Dsuites=suite-setup,suite
+    mvn verify -Pqa,[tomcat|jboss] -Dwizard.preset=nuxeo-dm -Dsuites=suite-setup,suite
     mvn verify -Denv.NUXEO_HOME=/path/to/my/tomcat -Dsuites=suite-setup,suite
 
 To run the suites on an already-running Nuxeo instance, use:
