@@ -136,8 +136,47 @@
 	<td>//input[@value='Create']</td>
 	<td></td>
 </tr>
-
-
+<!--Update dashboard -->
+<tr>
+	<td>clickAndWait</td>
+	<td>Link=Admin Center</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>Link=Dashboards</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForOpensocialGadgetsToLoad</td>
+	<td>nxDocumentListData</td>
+	<td>60000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>Link=Add gadget</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForElementPresent</td>
+	<td>//div[@gadget-name='waitingfor']</td>
+	<td>2000</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>//div[@gadget-name='waitingfor']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>waitForOpensocialGadgetsToLoad</td>
+	<td>nxDocumentListData</td>
+	<td>60000</td>
+</tr>
+<tr>
+	<td>verifyTextPresent</td>
+	<td>My Pending Requests</td>
+	<td></td>
+</tr>
 <!--Create users-->
 <tr>
 	<td>clickAndWait</td>
@@ -679,7 +718,6 @@
 	<td>10000</td>
 	<td></td>
 </tr>
-
 <!-- Set ACLs -->
 <!-- Administrator connects -->
 <tr>
@@ -735,53 +773,53 @@
 </tr>
 <!-- Give jsmith admin rights -->
 <tr>
-        <td>watchA4jRequests</td>
-        <td></td>
-        <td></td>
+	<td>watchA4jRequests</td>
+	<td></td>
+	<td></td>
 </tr>
 <tr>
-        <td>typeKeys</td>
-        <td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-        <td>jsmith</td>
+	<td>typeKeys</td>
+	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
+	<td>jsmith</td>
 </tr>
 <tr>
-        <td>waitForA4jRequest</td>
-        <td>10000</td>
-        <td></td>
+	<td>waitForA4jRequest</td>
+	<td>10000</td>
+	<td></td>
 </tr>
 <tr>
-        <td>verifyText</td>
-        <td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-        <td>John Smith</td>
+	<td>verifyText</td>
+	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
+	<td>John Smith</td>
 </tr>
 <tr>
-        <td>click</td>
-        <td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-        <td></td>
+	<td>click</td>
+	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
+	<td></td>
 </tr>
-    <!-- wait for table to appear -->
+<!-- wait for table to appear -->
 <tr>
-        <td>waitForCondition</td>
-        <td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
-        <td>10000</td>
-</tr>
-<tr>
-        <td>select</td>
-        <td>//*[@id='add_rights_form']/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/select</td>
-        <td>label=Manage everything</td>
+	<td>waitForCondition</td>
+	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
+	<td>10000</td>
 </tr>
 <tr>
-        <td>clickAndWait</td>
-        <td>//input[@value='Add permission']</td>
-        <td></td>
+	<td>select</td>
+	<td>//*[@id='add_rights_form']/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/select</td>
+	<td>label=Manage everything</td>
 </tr>
-    <!-- empty user selection to set new local rights-->
+<tr>
+	<td>clickAndWait</td>
+	<td>//input[@value='Add permission']</td>
+	<td></td>
+</tr>
+<!-- empty user selection to set new local rights-->
 <tr>
 	<td>click</td>
 	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
 	<td></td>
 </tr>
-    <!-- wait for table to disappear -->
+<!-- wait for table to disappear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
@@ -813,7 +851,7 @@
 	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
 	<td></td>
 </tr>
-    <!-- wait for table to appear -->
+<!-- wait for table to appear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
@@ -829,13 +867,13 @@
 	<td>//input[@value='Add permission']</td>
 	<td></td>
 </tr>
-    <!-- empty user selection to set new local rights-->
+<!-- empty user selection to set new local rights-->
 <tr>
 	<td>click</td>
 	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
 	<td></td>
 </tr>
-    <!-- wait for table to disappear -->
+<!-- wait for table to disappear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
@@ -867,7 +905,7 @@
 	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
 	<td></td>
 </tr>
-    <!-- wait for table to appear -->
+<!-- wait for table to appear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
@@ -883,13 +921,13 @@
 	<td>//input[@value='Add permission']</td>
 	<td></td>
 </tr>
-    <!-- empty user selection to set new local rights-->
+<!-- empty user selection to set new local rights-->
 <tr>
 	<td>click</td>
 	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
 	<td></td>
 </tr>
-    <!-- wait for table to disappear -->
+<!-- wait for table to disappear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
@@ -921,7 +959,7 @@
 	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
 	<td></td>
 </tr>
-    <!-- wait for table to appear -->
+<!-- wait for table to appear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
@@ -937,13 +975,13 @@
 	<td>//input[@value='Add permission']</td>
 	<td></td>
 </tr>
-    <!-- empty user selection to set new local rights-->
+<!-- empty user selection to set new local rights-->
 <tr>
 	<td>click</td>
 	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
 	<td></td>
 </tr>
-    <!-- wait for table to disappear -->
+<!-- wait for table to disappear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
@@ -975,7 +1013,7 @@
 	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
 	<td></td>
 </tr>
-    <!-- wait for table to appear -->
+<!-- wait for table to appear -->
 <tr>
 	<td>waitForCondition</td>
 	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
@@ -991,7 +1029,7 @@
 	<td>//input[@value='Add permission']</td>
 	<td></td>
 </tr>
-    <!-- save permissions -->
+<!-- save permissions -->
 <tr>
 	<td>clickAndWait</td>
 	<td>//input[@value='Save local rights']</td>
@@ -1002,7 +1040,6 @@
 	<td>//input[@value='Save local rights']</td>
 	<td></td>
 </tr>
-
 <!-- login as jdoe -->
 <tr>
 	<td>open</td>
@@ -1034,7 +1071,6 @@
 	<td>jdoe</td>
 	<td></td>
 </tr>
-
 <!-- Create Note -->
 <tr>
 	<td>mouseDown</td>
@@ -1048,12 +1084,12 @@
 </tr>
 <tr>
 	<td>type</td>
-	<td>//td[@class="fieldColumn"]/input[@type="text"]</td>
+	<td>//td[@class=&quot;fieldColumn&quot;]/input[@type=&quot;text&quot;]</td>
 	<td>testNote1</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>//td[@class="fieldColumn"]/textarea</td>
+	<td>//td[@class=&quot;fieldColumn&quot;]/textarea</td>
 	<td>desc testNote1</td>
 </tr>
 <tr>
@@ -1076,14 +1112,12 @@
 	<td>0.0</td>
 	<td></td>
 </tr>
-
 <!-- logout -->
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Log out</td>
 	<td></td>
 </tr>
-
 </tbody></table>
 </body>
 </html>
