@@ -6,17 +6,17 @@
   <parent>
     <groupId>org.nuxeo.ecm.distribution</groupId>
     <artifactId>nuxeo-distribution</artifactId>
-    <version>5.6-SNAPSHOT</version>
+    <version>5.6.0-HF04-SNAPSHOT</version>
   </parent>
 
   <groupId>org.nuxeo.marketplace.jbpm</groupId>
   <artifactId>parent</artifactId>
   <packaging>pom</packaging>
   <name>Nuxeo jBPM Marketplace Parent</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
 
   <properties>
-    <nuxeo.marketplace.jbpm.version>1.0-SNAPSHOT</nuxeo.marketplace.jbpm.version>
+    <nuxeo.marketplace.jbpm.version>1.0.0-SNAPSHOT</nuxeo.marketplace.jbpm.version>
   </properties>
 
   <dependencyManagement>
