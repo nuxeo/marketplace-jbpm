@@ -20,7 +20,7 @@ to a separate addon, and replaced by the new Document Routing module.
   <production-state>production_ready</production-state>
   <supported>true</supported>
   <platforms>
-    <platform>cap-@DISTRIB_VERSION@</platform>
+    <platform>cap-@TARGET_VERSION@</platform>
   </platforms>
   <license>LGPLv2.1</license>
   <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
