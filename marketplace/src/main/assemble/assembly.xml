@@ -13,7 +13,7 @@
       <filterset>
         <filter token="VERSION" value="${nuxeo.marketplace.jbpm.version}" />
         <filter token="DISTRIB_VERSION" value="${nuxeo.distribution.version}" />
-        <filter token="TARGET_VERSION" value="${nuxeo.target.version}" />
+        <filter token="TARGET_VERSION" value="${nuxeo.target.jbpm.version}" />
       </filterset>
     </copy>
     <copy todir="${maven.project.build.directory}">
