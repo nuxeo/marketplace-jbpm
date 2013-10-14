@@ -200,7 +200,7 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>Link=Users &amp; groups</td>
+	<td>Link=Users &amp; Groups</td>
 	<td></td>
 </tr>
 <!-- jdoe -->
@@ -340,36 +340,23 @@
 	<td></td>
 	<td></td>
 </tr>
+<!-- Since 5.7.3 group is a select2 widget-->
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='createUserView:createUser:nxl_user:nxw_groups_suggest']</td>
-	<td>members</td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_groups_select2']</td>
+    <td>members</td>
 </tr>
 <tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>Members group</td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
-</tr>
+<!--  -->
 <tr>
 	<td>watchA4jRequests</td>
 	<td></td>
@@ -452,39 +439,19 @@
 	<td>bree1</td>
 </tr>
 <tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_groups_select2']</td>
+    <td>members</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='createUserView:createUser:nxl_user:nxw_groups_suggest']</td>
-	<td>members</td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>Members group</td>
-</tr>
-<tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
 <tr>
 	<td>watchA4jRequests</td>
@@ -567,41 +534,23 @@
 	<td>//input[@id='createUserView:createUser:nxl_user:nxw_email']</td>
 	<td>sg+lbramard@nuxeo.com</td>
 </tr>
+<!-- Since 5.7.3 group is a select2 widget-->
 <tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_groups_select2']</td>
+    <td>members</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='createUserView:createUser:nxl_user:nxw_groups_suggest']</td>
-	<td>members</td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>Members group</td>
-</tr>
-<tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
-</tr>
+<!--  -->
 <tr>
 	<td>watchA4jRequests</td>
 	<td></td>
@@ -683,46 +632,23 @@
 	<td>//input[@id='createUserView:createUser:nxl_user:nxw_email']</td>
 	<td>sg+linnet@nuxeo.com</td>
 </tr>
+<!-- Since 5.7.3 group is a select2 widget-->
 <tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_groups_select2']</td>
+    <td>members</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='createUserView:createUser:nxl_user:nxw_groups_suggest']</td>
-	<td>members</td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>Members group</td>
-</tr>
-<tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='createUserView:createUser:nxl_user:nxw_groups_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
-</tr>
-<tr>
-	<td>watchA4jRequests</td>
-	<td></td>
-	<td></td>
-</tr>
+<!--  -->
 <tr>
 	<td>click</td>
 	<td>//input[@value='Save']</td>
@@ -792,32 +718,23 @@
 	<td></td>
 	<td></td>
 </tr>
+<!-- Since 5.7.3 rights is a select2 widget-->
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td>jsmith</td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_selection_select2']</td>
+    <td>jsmith</td>
 </tr>
 <tr>
-	<td>waitForA4jRequest</td>
-	<td>10000</td>
-	<td></td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>verifyText</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>John Smith</td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<!-- wait for table to appear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
-	<td>10000</td>
-</tr>
+<!--  -->
 <tr>
 	<td>select</td>
 	<td>//*[@id='add_rights_form']/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/select</td>
@@ -828,50 +745,29 @@
 	<td>//input[@value='Add permission']</td>
 	<td></td>
 </tr>
-<!-- empty user selection to set new local rights-->
 <tr>
-	<td>click</td>
-	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
-	<td></td>
-</tr>
-<!-- wait for table to disappear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
-	<td>10000</td>
+    <td>click</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
 </tr>
 <!-- Give jdoe Write rights -->
+<!-- Since 5.7.3 rights is a select2 widget-->
 <tr>
-	<td>type</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td></td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_selection_select2']</td>
+    <td>jdoe</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td>jdoe</td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox').style.display != 'none'</td>
-	<td>10000</td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>John Doe</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<!-- wait for table to appear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
-	<td>10000</td>
-</tr>
+<!--  -->
 <tr>
 	<td>select</td>
 	<td>//*[@id='add_rights_form']/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/select</td>
@@ -884,48 +780,28 @@
 </tr>
 <!-- empty user selection to set new local rights-->
 <tr>
-	<td>click</td>
-	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
-	<td></td>
-</tr>
-<!-- wait for table to disappear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
-	<td>10000</td>
+    <td>click</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
 </tr>
 <!-- Give bree Read rights-->
+<!-- Since 5.7.3 rights is a select2 widget-->
 <tr>
-	<td>type</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td></td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_selection_select2']</td>
+    <td>bree</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td>bree</td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox').style.display != 'none'</td>
-	<td>10000</td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>Bree Van de Kaamp</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<!-- wait for table to appear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
-	<td>10000</td>
-</tr>
+<!--  -->
 <tr>
 	<td>select</td>
 	<td>//*[@id='add_rights_form']/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/select</td>
@@ -938,48 +814,28 @@
 </tr>
 <!-- empty user selection to set new local rights-->
 <tr>
-	<td>click</td>
-	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
-	<td></td>
-</tr>
-<!-- wait for table to disappear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
-	<td>10000</td>
+    <td>click</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
 </tr>
 <!-- Give lbramard Read rights-->
+<!-- Since 5.7.3 rights is a select2 widget-->
 <tr>
-	<td>type</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td></td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_selection_select2']</td>
+    <td>lbramard</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td>lbramard</td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox').style.display != 'none'</td>
-	<td>10000</td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>Lucien Bramard</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<!-- wait for table to appear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
-	<td>10000</td>
-</tr>
+<!--  -->
 <tr>
 	<td>select</td>
 	<td>//*[@id='add_rights_form']/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/select</td>
@@ -992,48 +848,28 @@
 </tr>
 <!-- empty user selection to set new local rights-->
 <tr>
-	<td>click</td>
-	<td>add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_delete</td>
-	<td></td>
-</tr>
-<!-- wait for table to disappear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') == null</td>
-	<td>10000</td>
+    <td>click</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
 </tr>
 <!-- Give linnet Write rights-->
+<!-- Since 5.7.3 rights is a select2 widget-->
 <tr>
-	<td>type</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td></td>
+    <td>select2Type</td>
+    <td>css=div[id$='nxw_selection_select2']</td>
+    <td>linnet</td>
 </tr>
 <tr>
-	<td>typeKeys</td>
-	<td>//input[@name='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggest']</td>
-	<td>linnet</td>
+    <td>waitForSelect2</td>
+    <td>10000</td>
+    <td></td>
 </tr>
 <tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox').style.display != 'none'</td>
-	<td>10000</td>
+    <td>clickAt</td>
+    <td>css=.select2-result-selectable</td>
+    <td></td>
 </tr>
-<tr>
-	<td>verifyText</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td>Linnet Scavo</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>//*[@id='add_rights_form:nxl_user_group_suggestion:nxw_selection_suggestionBox:suggest']/x:tbody/x:tr[1]/x:td[2]</td>
-	<td></td>
-</tr>
-<!-- wait for table to appear -->
-<tr>
-	<td>waitForCondition</td>
-	<td>selenium.browserbot.getCurrentWindow().document.getElementById('add_rights_form:nxl_user_group_suggestion:nxw_selection_list:0:nxw_selection_listItem') != null</td>
-	<td>10000</td>
-</tr>
+<!--  -->
 <tr>
 	<td>select</td>
 	<td>//*[@id='add_rights_form']/table/tbody/tr/td[2]/div/table/tbody/tr[2]/td[2]/select</td>
