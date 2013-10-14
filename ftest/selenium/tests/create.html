@@ -745,8 +745,14 @@
 	<td>//input[@value='Add permission']</td>
 	<td></td>
 </tr>
+<!-- empty user selection to set new local rights-->
 <tr>
     <td>click</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
+</tr>
+<tr>
+    <td>waitForElementNotPresent</td>
     <td>//li[@class='select2-search-choice'][1]/a</td>
     <td></td>
 </tr>
@@ -784,6 +790,11 @@
     <td>//li[@class='select2-search-choice'][1]/a</td>
     <td></td>
 </tr>
+<tr>
+    <td>waitForElementNotPresent</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
+</tr>
 <!-- Give bree Read rights-->
 <!-- Since 5.7.3 rights is a select2 widget-->
 <tr>
@@ -818,6 +829,11 @@
     <td>//li[@class='select2-search-choice'][1]/a</td>
     <td></td>
 </tr>
+<tr>
+    <td>waitForElementNotPresent</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
+</tr>
 <!-- Give lbramard Read rights-->
 <!-- Since 5.7.3 rights is a select2 widget-->
 <tr>
@@ -849,6 +865,11 @@
 <!-- empty user selection to set new local rights-->
 <tr>
     <td>click</td>
+    <td>//li[@class='select2-search-choice'][1]/a</td>
+    <td></td>
+</tr>
+<tr>
+    <td>waitForElementNotPresent</td>
     <td>//li[@class='select2-search-choice'][1]/a</td>
     <td></td>
 </tr>
