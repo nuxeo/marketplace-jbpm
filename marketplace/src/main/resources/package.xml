@@ -7,6 +7,8 @@ This addon provides an interface to manage workflows through the jBPM engine.
 <p>
 It was included by default up to Nuxeo 5.5, but since Nuxeo 5.6 it has been deprecated and moved
 to a separate addon, and replaced by the new Document Routing module.
+It can not be used in the same time with the routing workflow.
+When this package is installed , the bundles nuxeo-platform-document-routing-* are removed.
 </p>
   </description>
   <home-page>http://doc.nuxeo.com/</home-page>

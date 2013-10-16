@@ -1,7 +1,9 @@
 <project name="nuxeo-assembly" default="build" xmlns:nx="urn:nuxeo-build"
   xmlns:artifact="urn:nuxeo-artifact">
-  <taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
-  <taskdef resource="org/nuxeo/build/artifact/antlib.xml" uri="urn:nuxeo-artifact" />
+	<taskdef resource="org/nuxeo/build/antlib.xml" uri="urn:nuxeo-build" />
+	<taskdef resource="org/nuxeo/build/artifact/antlib.xml"
+	           uri="urn:nuxeo-artifact" />
+	<taskdef resource="net/sf/antcontrib/antlib.xml" />
 
   <target name="build" description="Build Nuxeo jBPM Marketplace package">
     <tstamp />
@@ -16,7 +18,8 @@
         <filter token="TARGET_VERSION" value="${nuxeo.target.jbpm.version}" />
       </filterset>
     </copy>
-    <copy todir="${maven.project.build.directory}">
+  	
+  	<copy todir="${maven.project.build.directory}">
       <artifact:resolveFile
         key="org.nuxeo.ecm.distribution:nuxeo-distribution-cap::zip" />
       <artifact:resolveFile
@@ -29,12 +32,37 @@
       excludesfile="${maven.project.build.directory}/excludesfile"
       patternsetid="diff.versus.cap">
     </nx:zipdiff>
-    <unzip
+   
+    <!-- NXP-12166: filter out conflicting JARs -->
+  	<var name="install.excludes" value="" />
+  	<loadfile property="jars" srcfile="${maven.project.build.directory}/excludesfile" />
+    <for param="line" list="${jars}" delimiter="${line.separator}">
+      <sequential>
+        <if>
+          <matches pattern=".*\.jar" string="@{line}" />
+          <then>
+            <echo>Excluding @{line}</echo>
+            <var name="install.excludes"
+                 value="${install.excludes}  &lt;delete file=&quot;${env.home}/@{line}&quot; /&gt;${line.separator}" />
+          </then>
+        </if>
+      </sequential>
+    </for>
+  	
+  	<unzip
       src="${maven.project.build.directory}/ear-${nuxeo.marketplace.jbpm.version}.zip"
       dest="${maven.project.build.directory}/marketplace/install">
       <patternset refid="diff.versus.cap" />
     </unzip>
 
+    <copy file="src/main/resources/install.xml"
+          todir="${maven.project.build.directory}/marketplace"
+          overwrite="true">
+      <filterset>
+        <filter token="EXCLUDES" value="${install.excludes}" />
+      </filterset>
+    </copy>
+  	
     <zip
       destfile="${maven.project.build.directory}/${maven.project.artifactId}-${nuxeo.marketplace.jbpm.version}.zip"
       basedir="${maven.project.build.directory}/marketplace" />
