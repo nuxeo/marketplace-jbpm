@@ -23,6 +23,7 @@ When this package is installed , the bundles nuxeo-platform-document-routing-* a
   <supported>true</supported>
   <platforms>
     <platform>cap-@TARGET_VERSION@</platform>
+    <platform>cap-5.8</platform>
   </platforms>
   <license>LGPLv2.1</license>
   <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
