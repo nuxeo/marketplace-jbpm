@@ -27,4 +27,5 @@ When this package is installed , the bundles nuxeo-platform-document-routing-* a
   </platforms>
   <license>LGPLv2.1</license>
   <license-url>http://www.gnu.org/licenses/lgpl-2.1.html</license-url>
+  <visibility>MARKETPLACE</visibility>
 </package>
